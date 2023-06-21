@@ -20,8 +20,8 @@ Building RECRNTAzero from source code requires technical knowledge of developing
 - Optional - Create a java run-time environment that contains the java base and desktop modules as a minimum.  The repository has a functional jre in the sub-directory \texttt{smalljre}.
 - Optional - Use Launch4j (or similar) to create a Windows executable that references the small jre.  The repository has a launch4j configuration file (at dist/energyCalculator3.xml) that can be edited and used with launch4j.
 -  Optional - Create a .zip archive that contains the Windows executable and two sub-directories:
-    - smalljre (or as configured in the launch4j configuration file) - that contains the java run-time environment.
-    - help - that contains html help instructions.  This directory must contain \texttt{EnergyCalculator.htm} as the initial entry point into the help instructions. 
+    - **smalljre** (or as configured in the launch4j configuration file) - that contains the java run-time environment.
+    - **help** - that contains html help instructions.  This directory must contain \texttt{EnergyCalculator.htm} as the initial entry point into the help instructions. 
 
 
 ## Tool Installation
