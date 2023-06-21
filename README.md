@@ -26,7 +26,7 @@ The tool is composed of several internal modules, receives a number of files as 
 More documentation on ARGAEL can be found at the following <a href="https://github.com/uts-isf/RECRNTAzero/wiki">link</a>.
 
 ## Authors
-Created on Jun 29, 2022  
+Created on March 29, 2022  
 Created by:
 - <a href="https://github.com/Ibrahim-a-Ibrahim" target="_blank">Ibrahim Anwar Ibrahim</a>
 - <a href="https://github.com/etanvah" target="_blank">Tanveer Choudhury</a>
