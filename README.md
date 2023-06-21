@@ -1,19 +1,19 @@
 <div align="center">
 
-  # RECRNTAzero
+  # CEREI
   ![version](https://img.shields.io/badge/version-1.0-blue) ![License](https://img.shields.io/cran/l/NCC)
   
 </div>
 
-**RECRNTAzero** is an open-source Java desktop application designed to model the energy market using spot market charges, network and retailer tariffs, including associated losses for cost-effective renewable energy investments.
+**CEREI** is an open-source Java desktop application designed to model the energy market using spot market charges, network and retailer tariffs, including associated losses for cost-effective renewable energy investments.
 
-RECRNTAzero presents a number of novelties and advantages:
+CEREI presents a number of novelties and advantages:
 - To help industrial and commercial customers to reduce their energy costs and improve their environmental performance.
 - To help decision-makers within the industrial and commercial organisations to identify cost-effective renewable energy solutions.
 - To support the integration of renewable energy sources into existing power systems, and to facilitate the transition to a more sustainable energy system.
 
-## Building RECRNTAzero from source code
-Building RECRNTAzero from source code requires technical knowledge of developing java applications.  The following describes the method used to build the version on the tool on the repository, although other methods can be used.
+## Building CEREI from source code
+Building CEREI from source code requires technical knowledge of developing java applications.  The following describes the method used to build the version on the tool on the repository, although other methods can be used.
 - Download the source code from the repository.
 - Compile the code.
 - Create a .jar file.
@@ -26,36 +26,36 @@ Building RECRNTAzero from source code requires technical knowledge of developing
 
 ## Tool Installation
 ### Installation on systems with jdk 18, openjdk 18 or later installed
-Download RECRNTAzero.jar from the repository. RECRNTAzero.jar has been tested with openjdk 18, 19 and 20.  The jar file can be run from a terminal/command window using the command:
+Download CEREI.jar from the repository. CEREI.jar has been tested with openjdk 18, 19 and 20.  The jar file can be run from a terminal/command window using the command:
 
-`java -jar RECRNTAzero.jar`
+`java -jar CEREI.jar`
 
-It is also possible to run RECRNTAzero by clicking on RECRNTAzero.jar by changing the configuration of your device.  Follow the relevant instructions provided by the manufacturer of your device and/or operating system.
+It is also possible to run CEREI by clicking on CEREI.jar by changing the configuration of your device.  Follow the relevant instructions provided by the manufacturer of your device and/or operating system.
 
-Note that RECRNTAzero was developed using jdk 18 and has been tested with openjdk19 and openjdk 20. 
+Note that CEREI was developed using jdk 18 and has been tested with openjdk19 and openjdk 20. 
 
 ### Installation of jdk or openjdk
 Install jdk 20 (or later) from this [link](https://www.oracle.com/au/java/technologies/downloads) or openjdk 20 (or later) from [link](https://openjdk.org/projects/jdk/), taking note and complying with the licence conditions and instructions associated with jdk or openjdk as appropriate.
 
 You may need administrative or superuser (root) privileges to install jdk or openjdk.
-Run RECRNTAzero as described in Subsection **Installation on systems with jdk 18, openjdk 18 or later installed** above.
+Run CEREI as described in Subsection **Installation on systems with jdk 18, openjdk 18 or later installed** above.
 
-### Installation of standalone RECRNTAzero (Windows only)
-Download the RECRNTAzero.zip file from the repository.  Extract all the files and subdirectories to a known location.  Double-click on RECRNTAzero.exe to run the tool.
-You do not need administrative privileges to install and run RECRNTAzero using this method.
+### Installation of standalone CEREI (Windows only)
+Download the CEREI.zip file from the repository.  Extract all the files and subdirectories to a known location.  Double-click on CEREI.exe to run the tool.
+You do not need administrative privileges to install and run CEREI using this method.
 
 ## User interface
 
-![Tool_Interface](https://github.com/uts-isf/RECRNTAzero/assets/63223580/c460fddf-3dd5-455c-a976-aba4e432a345)
+![Tool_Interface](https://github.com/uts-isf/CEREI/assets/63223580/c460fddf-3dd5-455c-a976-aba4e432a345)
 
 ## System architecture
 
-![Conceptual framework of RECRNTAzero](https://github.com/uts-isf/RECRNTAzero/assets/63223580/7ea38d52-04f9-4ee4-8d32-f337a7add722)
+![Conceptual framework of CEREI](https://github.com/uts-isf/CEREI/assets/63223580/7ea38d52-04f9-4ee4-8d32-f337a7add722)
 
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
 
 ## Documentation
-More documentation on RECRNTAzero can be found at the following <a href="https://github.com/uts-isf/RECRNTAzero/wiki">link</a>.
+More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki">link</a>.
 
 ## Authors
 Created on March 29, 2022  
@@ -65,7 +65,7 @@ Created by:
 - <a href="https://github.com/james007au" target="_blank">James Sargeant</a>
 
 ## License
-This project is licensed under the terms of the <a href="https://github.com/uts-isf/RECRNTAzero/blob/main/LICENSE">MIT License</a>.
+This project is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
 
 ## Acknowledgements
 This work is partially supported by the National Institute for Forestry Products Innovation (NIFPI) and Centre for New Energy Transition Research.
