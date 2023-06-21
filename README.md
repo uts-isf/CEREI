@@ -5,7 +5,7 @@
   
 </div>
 
-**RECRNTAzero** is an open-source Java desktop application designed to model the energy market using network and retailer tariffs, including associated losses.
+**RECRNTAzero** is an open-source Java desktop application designed to model the energy market using spot market charges, network and retailer tariffs, including associated losses for cost-effective renewable energy investments
 
 RECRNTAzero presents a number of novelties and advantages:
 - To help industrial and commercial customers to reduce their energy costs and improve their environmental performance.
