@@ -55,7 +55,7 @@ You do not need administrative privileges to install and run RECRNTAzero using t
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
 
 ## Documentation
-More documentation on ARGAEL can be found at the following <a href="https://github.com/uts-isf/RECRNTAzero/wiki">link</a>.
+More documentation on RECRNTAzero can be found at the following <a href="https://github.com/uts-isf/RECRNTAzero/wiki">link</a>.
 
 ## Authors
 Created on March 29, 2022  
