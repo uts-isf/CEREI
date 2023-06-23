@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\james\Documents\Git\CEREI\dist\CEREI.jar</jar>
+  <outfile>C:\Users\james\Documents\Git\CEREI\dist\CEREI.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon></icon>
+  <jre>
+    <path>.\smalljre</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>18.0.0</minVersion>
+    <maxVersion>18.0.2</maxVersion>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>Version 1.0.0.0 23 June 2023</txtFileVersion>
+    <fileDescription>Cost-Effective Renewable Energy Investments</fileDescription>
+    <copyright>James Sargeant 2023</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>Version 1.0.0.0 23 June 2023</txtProductVersion>
+    <productName>Cost-Effective Renewable Energy Investments</productName>
+    <companyName>Federation University</companyName>
+    <internalName>Cost-Effective Renewable Energy Investments.</internalName>
+    <originalFilename>CEREI.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
