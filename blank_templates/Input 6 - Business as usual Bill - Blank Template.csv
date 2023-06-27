@@ -1,0 +1,20 @@
+Year,Quarter,Month,Days,Business as Usual
+,,,,Total IncGST ($)
+,,,,Enter Meter_ID
+2020,Q1,January,31,
+,,February,29,
+,,March,31,
+,,Quarterly,91,
+,Q2,April,30,
+,,May,31,
+,,June,30,
+,,Quarterly,91,
+,Q3,July,31,
+,,August,31,
+,,September,30,
+,,Quarterly,92,
+,Q4,October,31,
+,,November,30,
+,,December,31,
+,,Quarterly,92,
+,Annual,,366,

@@ -1,0 +1,22 @@
+# Investment name is mandatory,,
+Investment Name,,
+,,
+"# Lifetime, Discount Rate and Inflation Rate are all mandatory",,
+Lifetime,,years
+Discount Rate,,
+Inflation Rate,,
+Degradation Rate,,
+,,
+# There must be at one Component that can have the following optional or mandatory parameters.  Each component must be followed by an empty row.,,
+# Component,Mandatory ,Component Name
+# Cost Code,Optional,Can be a specific string to match accounting cost codes - defaults to the next number in sequence
+# Number of Units,Optional,Defaults to 1
+# Capital Cost,Optional,"Note that there must be at least one of Capital Cost, Installation Cost, Fixed O&M Ccst, Replacement Cost or Future Cost"
+# Installation Cost,Optional,
+# Fixed O&M Cost,Optional,
+# Replacement Cost,Optional,Requires a thrid parameter - replacement freqeuncy
+# Future Cost,Optional,Requires a thrid parameter - future freqeuncy
+#Discount Rate,Optional,Defaults to project Discount Rate
+#Inflation Rate,Optional,Defaults to project Inflation Rate
+,,
+Component,,
