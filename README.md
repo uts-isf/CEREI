@@ -12,14 +12,33 @@ CEREI presents a number of novelties and advantages:
 - To help decision-makers within the industrial and commercial organisations to identify cost-effective renewable energy solutions.
 - To support the integration of renewable energy sources into existing power systems, and to facilitate the transition to a more sustainable energy system.
 
+## Table of Contents
+<!-- TOC generated with https://freelance-tech-writer.github.io/table-of-contents-generator/index.html -->
+   * [Contents of the repo](#contents-of-the-repo)
+   * [Building CEREI from source code](#building-cerei-from-source-code)
+   * [Tool Installation](#tool-installation)
+       * [Installation on systems with jdk 18, openjdk 18 or later installed](#installation-on-systems-with-jdk-18-openjdk-18-or-later-installed)
+       * [Installation of jdk or openjdk](#installation-of-jdk-or-openjdk)
+       * [Installation of standalone CEREI (Windows only)](#installation-of-standalone-cerei-windows-only)
+   * [System architecture](#system-architecture)
+   * [User interface](#user-interface)
+   * [CERI operation](#ceri-operation)
+   * [Documentation](#documentation)
+   * [Authors](#authors)
+   * [Get involved with the community](#get-involved-with-the-community)
+       * [Bug reporting and bug fixing](#bug-reporting-and-bug-fixing)
+       * [New features and enhancements](#new-features-and-enhancements)
+   * [License](#license)
+   * [Acknowledgements](#acknowledgements)
+
 ## Contents of the repo
-- [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder:
+- [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
     - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains [module-info.java](https://github.com/uts-isf/CEREI/blob/main/src/main/java/module-info.java) file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
     - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
 - [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains [CEREI.xml](https://github.com/uts-isf/CEREI/blob/main/tools/CEREI.xml) file used which is by Launch4j to create the cerei.exe file from the cerei.jar file.  (cerei.jar is created from the source code)
-- [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc.  (APIs that provide documentation for subsequent developers).
+- [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
 - [app]: It contains the executable file and the associated folders.
-- [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more infimration how to fill them up, 
+- [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
 - [sample_data](https://github.com/uts-isf/CEREI/tree/main/sample_data) folder: It contains a set of sub-folders containing input files specifically tailored for 15 different case study scenarios. These input files are carefully crafted from real-world data and represent various scenarios, each representing a unique use case.
 
 ## Building CEREI from source code
@@ -34,6 +53,7 @@ Building CEREI from source code requires technical knowledge of developing java 
     - **help** - that contains html help instructions.  This directory must contain \texttt{EnergyCalculator.htm} as the initial entry point into the help instructions. 
 
 ## Tool Installation
+
 ### Installation on systems with jdk 18, openjdk 18 or later installed
 Download CEREI.jar from the repository. CEREI.jar has been tested with openjdk 18, 19 and 20.  The jar file can be run from a terminal/command window using the command:
 
@@ -53,15 +73,28 @@ Run CEREI as described in Subsection **Installation on systems with jdk 18, open
 Download the CEREI.zip file from the repository.  Extract all the files and subdirectories to a known location.  Double-click on CEREI.exe to run the tool.
 You do not need administrative privileges to install and run CEREI using this method.
 
-## User interface
-
-![Tool_Interface](https://github.com/uts-isf/CEREI/assets/63223580/c460fddf-3dd5-455c-a976-aba4e432a345)
-
 ## System architecture
 
 ![Conceptual framework of CEREI](https://github.com/uts-isf/CEREI/assets/63223580/7ea38d52-04f9-4ee4-8d32-f337a7add722)
 
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
+
+## User interface
+
+![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/b171be19-4f47-4789-baab-8b0f1de011c6)
+
+## CERI operation
+
+CEREI can be operated in two simple steps:
+- **Step 1:** Click on each ***button***, within the ***red*** highlighted box in the Figure below, and select the relevant input file.
+- **Step 2:** Click ***Calculate***. This is highlighted by the ***blue*** font button in the Figure below. This will generate the output(s) in the relevant tab(s) and produce a pop-up, stating “*Calculation Complete. Results in relevant tabs*”.
+
+The user needs to click on the “***Reset Input Files***” button to reset all input files.
+
+If any individual file(s) needs to be replaced, then only the relevant button(s) (within the ***red*** highlighted box in the Figure below) needs to be clicked to select the new file.
+    
+CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation). 
+![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/0bb0b838-47f7-4b54-afe2-a06d2e45e69c)
 
 ## Documentation
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki">link</a>.
@@ -74,6 +107,7 @@ Created by:
 - <a href="https://github.com/james007au" target="_blank">James Sargeant</a>
 
 ## Get involved with the community
+
 ### Bug reporting and bug fixing
 You can help us by submitting bug reports or fixing bugs in the [CEREI issue tracker](https://github.com/uts-isf/CEREI/issues).
 
