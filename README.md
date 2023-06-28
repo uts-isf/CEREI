@@ -1,7 +1,7 @@
 <div align="center">
 
-  # CEREI
-  ![version](https://img.shields.io/badge/version-1.0-blue) ![License](https://img.shields.io/cran/l/NCC)
+# CEREI
+![version](https://img.shields.io/badge/version-1.0-blue) ![License](https://img.shields.io/cran/l/NCC)
   
 </div>
 
@@ -11,6 +11,16 @@ CEREI presents a number of novelties and advantages:
 - To help industrial and commercial customers to reduce their energy costs and improve their environmental performance.
 - To help decision-makers within the industrial and commercial organisations to identify cost-effective renewable energy solutions.
 - To support the integration of renewable energy sources into existing power systems, and to facilitate the transition to a more sustainable energy system.
+
+## Contents of the repo
+- [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder:
+    - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains [module-info.java](https://github.com/uts-isf/CEREI/blob/main/src/main/java/module-info.java) file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
+    - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
+- [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains [CEREI.xml](https://github.com/uts-isf/CEREI/blob/main/tools/CEREI.xml) file used which is by Launch4j to create the cerei.exe file from the cerei.jar file.  (cerei.jar is created from the source code)
+- [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc.  (APIs that provide documentation for subsequent developers).
+- [app]: It contains the executable file and the associated folders.
+- [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more infimration how to fill them up, 
+- [sample_data](https://github.com/uts-isf/CEREI/tree/main/sample_data) folder: It contains a set of sub-folders containing input files specifically tailored for 15 different case study scenarios. These input files are carefully crafted from real-world data and represent various scenarios, each representing a unique use case.
 
 ## Building CEREI from source code
 Building CEREI from source code requires technical knowledge of developing java applications.  The following describes the method used to build the version on the tool on the repository, although other methods can be used.
@@ -22,7 +32,6 @@ Building CEREI from source code requires technical knowledge of developing java 
 -  Optional - Create a .zip archive that contains the Windows executable and two sub-directories:
     - **smalljre** (or as configured in the launch4j configuration file) - that contains the java run-time environment.
     - **help** - that contains html help instructions.  This directory must contain \texttt{EnergyCalculator.htm} as the initial entry point into the help instructions. 
-
 
 ## Tool Installation
 ### Installation on systems with jdk 18, openjdk 18 or later installed
@@ -58,11 +67,28 @@ The tool is composed of several internal modules, receives a number of files as 
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki">link</a>.
 
 ## Authors
-Created on March 29, 2022  
+Created on November 29, 2022
 Created by:
 - <a href="https://github.com/Ibrahim-a-Ibrahim" target="_blank">Ibrahim Anwar Ibrahim</a>
 - <a href="https://github.com/etanvah" target="_blank">Tanveer Choudhury</a>
 - <a href="https://github.com/james007au" target="_blank">James Sargeant</a>
+
+## Get involved with the community
+### Bug reporting and bug fixing
+You can help us by submitting bug reports or fixing bugs in the [CEREI issue tracker](https://github.com/uts-isf/CEREI/issues).
+
+### New features and enhancements
+If you wish to contribute patches you can:
+
+- [fork the repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+- make your changes
+- commit to your repository
+- and then [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
+The development team can then review your contribution and commit it upstream as appropriate.
+
+If you commit a new feature, add [FEATURE] to your commit message AND give a clear description of the new feature. The label Needs documentation will be added by maintainers and will automatically create an issue on the CEREI-Documentation, where you or others should write documentation about it.
+
+For large-scale changes, you can contact the authors of the repository.
 
 ## License
 This project is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
