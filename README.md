@@ -32,18 +32,18 @@ CEREI presents a number of novelties and advantages:
    * [Acknowledgements](#acknowledgements)
 
 ## Contents of the repo
-- [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
+- The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
     - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains [module-info.java](https://github.com/uts-isf/CEREI/blob/main/src/main/java/module-info.java) file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
     - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
-- [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains [CEREI.xml](https://github.com/uts-isf/CEREI/blob/main/tools/CEREI.xml) file used which is by Launch4j to create the cerei.exe file from the cerei.jar file.  (cerei.jar is created from the source code)
-- [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
-- [app]: It contains the executable file and the associated folders.
-- [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
-- [sample_data](https://github.com/uts-isf/CEREI/tree/main/sample_data) folder: It contains a set of sub-folders containing input files specifically tailored for 15 different case study scenarios. These input files are carefully crafted from real-world data and represent various scenarios, each representing a unique use case.
+- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains [CEREI.xml](https://github.com/uts-isf/CEREI/blob/main/tools/CEREI.xml) file used which is by Launch4j to create the cerei.exe file from the cerei.jar file.  (cerei.jar is created from the source code)
+- The [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
+- The [app](https://github.com/uts-isf/CEREI/tree/main/app) folder: It contains the executable file and the associated folders for the current version.
+- The [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
+- The [sample_data](https://github.com/uts-isf/CEREI/tree/main/sample_data) folder: It contains a set of sub-folders containing input files specifically tailored for 15 different case study scenarios. These input files are carefully crafted from real-world data and represent various scenarios, each representing a unique use case.
 
 ## Building CEREI from source code
 Building CEREI from source code requires technical knowledge of developing java applications.  The following describes the method used to build the version on the tool on the repository, although other methods can be used.
-- Download the source code from the repository.
+- Download the source code from the repository, which can be found in the [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder.
 - Compile the code.
 - Create a .jar file.
 - Optional - Create a java run-time environment that contains the java base and desktop modules as a minimum.  The repository has a functional jre in the sub-directory \texttt{smalljre}.
@@ -70,7 +70,7 @@ You may need administrative or superuser (root) privileges to install jdk or ope
 Run CEREI as described in Subsection **Installation on systems with jdk 18, openjdk 18 or later installed** above.
 
 ### Installation of standalone CEREI (Windows only)
-Download the CEREI.zip file from the repository.  Extract all the files and subdirectories to a known location.  Double-click on CEREI.exe to run the tool.
+Download the version folder from [app](https://github.com/uts-isf/CEREI/tree/main/app) folder, which is currently [v1.0](https://github.com/uts-isf/CEREI/tree/main/app/v1.0). Double-click on CEREI.exe to run the tool.
 You do not need administrative privileges to install and run CEREI using this method.
 
 ## System architecture
@@ -99,7 +99,7 @@ CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to 
 ## Documentation
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki">link</a>.
 
-## Authors
+## Developers
 Created on November 29, 2022
 Created by:
 - <a href="https://github.com/Ibrahim-a-Ibrahim" target="_blank">Ibrahim Anwar Ibrahim</a>
@@ -121,8 +121,6 @@ If you wish to contribute patches you can:
 The development team can then review your contribution and commit it upstream as appropriate.
 
 If you commit a new feature, add [FEATURE] to your commit message AND give a clear description of the new feature. The label Needs documentation will be added by maintainers and will automatically create an issue on the CEREI-Documentation, where you or others should write documentation about it.
-
-For large-scale changes, you can contact the authors of the repository.
 
 ## License
 This project is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
