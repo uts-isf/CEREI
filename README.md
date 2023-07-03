@@ -33,9 +33,9 @@ CEREI presents a number of novelties and advantages:
 
 ## Contents of the repo
 - The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
-    - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains [module-info.java](https://github.com/uts-isf/CEREI/blob/main/src/main/java/module-info.java) file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
+    - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains `module-info.java` file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
     - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
-- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains [CEREI.xml](https://github.com/uts-isf/CEREI/blob/main/tools/CEREI.xml) file used which is by Launch4j to create the cerei.exe file from the cerei.jar file.  (cerei.jar is created from the source code)
+- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains `CEREI.xml` file used which is by Launch4j to create the cerei.exe file from the `cerei.jar` file (`cerei.jar` is created from the source code).
 - The [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
 - The [app](https://github.com/uts-isf/CEREI/tree/main/app) folder: It contains the executable file and the associated folders for the current version.
 - The [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
@@ -46,11 +46,11 @@ Building CEREI from source code requires technical knowledge of developing java 
 - Download the source code from the repository, which can be found in the [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder.
 - Compile the code.
 - Create a .jar file.
-- Optional - Create a java run-time environment that contains the java base and desktop modules as a minimum.  The repository has a functional jre in the sub-directory \texttt{smalljre}.
-- Optional - Use Launch4j (or similar) to create a Windows executable that references the small jre.  The repository has a launch4j configuration file (at dist/energyCalculator3.xml) that can be edited and used with launch4j.
+- Optional - Create a java run-time environment that contains the java base and desktop modules as a minimum. The repository has a functional jre in the sub-directory `smalljre`.
+- Optional - Use Launch4j (or similar) to create a Windows executable that references the small jre.  The repository has a launch4j configuration file (at [tools](https://github.com/uts-isf/CEREI/tree/main/tools)/`CEREI.xml`) that can be edited and used with launch4j.
 -  Optional - Create a .zip archive that contains the Windows executable and two sub-directories:
     - **smalljre** (or as configured in the launch4j configuration file) - that contains the java run-time environment.
-    - **help** - that contains html help instructions.  This directory must contain \texttt{EnergyCalculator.htm} as the initial entry point into the help instructions. 
+    - **help** - that contains html help instructions.  This directory must contain `CEREI.htm` as the initial entry point into the help instructions. 
 
 ## Tool Installation
 
@@ -59,7 +59,7 @@ Download CEREI.jar from the repository. CEREI.jar has been tested with openjdk 1
 
 `java -jar CEREI.jar`
 
-It is also possible to run CEREI by clicking on CEREI.jar by changing the configuration of your device.  Follow the relevant instructions provided by the manufacturer of your device and/or operating system.
+It is also possible to run CEREI by clicking on CEREI.jar by changing the configuration of your device. Follow the relevant instructions provided by the manufacturer of your device and/or operating system.
 
 Note that CEREI was developed using jdk 18 and has been tested with openjdk19 and openjdk 20. 
 
@@ -123,7 +123,7 @@ The development team can then review your contribution and commit it upstream as
 If you commit a new feature, add [FEATURE] to your commit message AND give a clear description of the new feature. The label Needs documentation will be added by maintainers and will automatically create an issue on the CEREI-Documentation, where you or others should write documentation about it.
 
 ## License
-This project is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
+This project has been developed in collaboration between [UTS](https://www.uts.edu.au/) and [Federation University](https://federation.edu.au/) and it is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
 
 ## Acknowledgements
-This work is partially supported by the National Institute for Forestry Products Innovation (NIFPI) and Centre for New Energy Transition Research.
+This work is partially supported by the [National Institute for Forestry Products Innovation (NIFPI)](https://nifpi.org.au/) and [Centre for New Energy Transition Research](https://federation.edu.au/research/research-centres/cfnetr).
