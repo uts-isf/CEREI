@@ -24,12 +24,11 @@ CEREI presents a number of novelties and advantages:
    * [User interface](#user-interface)
    * [CERI operation](#ceri-operation)
    * [Documentation](#documentation)
-   * [Authors](#authors)
+   * [Developers](#developers)
    * [Get involved with the community](#get-involved-with-the-community)
        * [Bug reporting and bug fixing](#bug-reporting-and-bug-fixing)
        * [New features and enhancements](#new-features-and-enhancements)
    * [License](#license)
-   * [Acknowledgements](#acknowledgements)
 
 ## Contents of the repo
 - The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
@@ -97,7 +96,7 @@ CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to 
 ![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/0bb0b838-47f7-4b54-afe2-a06d2e45e69c)
 
 ## Documentation
-More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki">link</a>.
+More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
 
 ## Developers
 Created on November 29, 2022
