@@ -1,8 +1,8 @@
 <div align="center">
 
 # CEREI
-![version](https://img.shields.io/badge/version-1.0-blue) ![License](https://img.shields.io/cran/l/NCC)
-  
+<!-- ![version](https://img.shields.io/badge/version-1.0-blue) ![License](https://img.shields.io/cran/l/NCC) -->
+ 
 </div>
 
 **CEREI** is an open-source Java desktop application designed to model the energy market using spot market charges, network and retailer tariffs, including associated losses for cost-effective renewable energy investments.
