@@ -100,9 +100,9 @@ public class SaveLifecycleSummary extends JButton implements ActionListener {
 	            fw.newLine();
 	            fw.write("Cost of Investment ($)," + df2.format(-1*UI.lifecylce.costOfInvestment));
 	            fw.newLine();
-	            fw.write("Total Revenue (future value of all revenue and savings) ($)," + df2.format(UI.lifecylce.totalRevenue));
+	            fw.write("Total Revenue (future value of all revenue and savings) ($)," + df2.format(UI.lifecylce.npvRevenue));
 	            fw.newLine();
-	            fw.write("Net Present Value (NPV) ($)," + df2.format(UI.lifecylce.npvTotal + UI.lifecylce.totalRevenue));
+	            fw.write("Net Present Value (NPV) ($)," + df2.format(UI.lifecylce.npvCost + UI.lifecylce.npvRevenue));
 	            fw.newLine();
 	            fw.write("Annual Worth (AW) ($/year)," + df2.format(UI.lifecylce.totalATLCC + UI.lifecylce.annualTotalSavings));
 	            fw.newLine();

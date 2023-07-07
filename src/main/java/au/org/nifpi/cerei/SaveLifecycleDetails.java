@@ -198,7 +198,7 @@ public class SaveLifecycleDetails extends JButton implements ActionListener {
 	            		fw.newLine();
 	            	}
 	            }
-	    		fw.write(df0.format(UI.lifecylce.lifecycleCostComponents.length+1)+",Scenario Equipment Totals,,,,,,,,,,"+df2.format(UI.lifecylce.npvTotal)+","+df2.format(UI.lifecylce.totalATLCC));
+	    		fw.write(df0.format(UI.lifecylce.lifecycleCostComponents.length+1)+",Scenario Equipment Totals,,,,,,,,,,"+df2.format(UI.lifecylce.npvCost)+","+df2.format(UI.lifecylce.totalATLCC));
 	    		fw.newLine();
 	    	} catch (Exception ex) {
 		    	//Need to display a warning dialog with the error.

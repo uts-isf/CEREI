@@ -37,7 +37,7 @@ public class LifecycleCostAnalysis {
 	protected double sumALCCEnergyGenerated=0;
 
 	/** NPV of the total project - reported in Lifecyle Cost Analysis pane, the Lifecycle Summary .csv file and the Lifecyle details .csv file. */
-	protected double npvTotal = 0;
+	protected double npvCost = 0;
 
 	/** Sum of all ATLCC Capital costs */
 	protected double totalATLCCCapital = 0;
@@ -58,7 +58,7 @@ public class LifecycleCostAnalysis {
 	/** Total savings from "Business as Usual" cost saving analysis, calculated by discounting each month by the inflation and "j factor" rates. */
 	protected double annualTotalSavings = 0;
 	/** Total revenue of the entire project, calculated by discounting the annual Total Savings by the "j factor". */
-	protected double totalRevenue = 0;
+	protected double npvRevenue = 0;
 
 	/** Project payback period (years). */
 	protected double paybackPeriod;
@@ -462,7 +462,7 @@ public class LifecycleCostAnalysis {
 			totalATLCCReplacement += lifecycleCostComponents[i].atlccReplacement;
 			totalATLCCFuture += lifecycleCostComponents[i].atlccFuture;
 			costOfInvestment += lifecycleCostComponents[i].totalCapitalCost + lifecycleCostComponents[i].totalInstallationCost; //EQROI-12
-			npvTotal += lifecycleCostComponents[i].totalNPV;
+			npvCost += lifecycleCostComponents[i].totalNPV;
 		}
 
 		totalATLCC = totalATLCCCapital + totalATLCCInstallation + totalATLCCFixedOM +totalATLCCReplacement + totalATLCCFuture; //EQROI-11
@@ -476,7 +476,7 @@ public class LifecycleCostAnalysis {
 				annualTotalSavings += bau.totalsavingsMeter.monthly[k] * (Math.pow(1 + (monthlyInflationRate / 100), k)/Math.pow(1 + (monthlyj / 100), k)); // EQROI-16
 			}
 			for (int n = 1; n<= lifetime; n++) {
-				totalRevenue += annualTotalSavings*(Math.pow(1+(j/100), lifetime));
+				npvRevenue += annualTotalSavings*(Math.pow(1+(j/100), lifetime));
 			}
 		}
 		
@@ -488,7 +488,7 @@ public class LifecycleCostAnalysis {
 			lcoe = -1;
 		}
 		else {
-			lcoe = Math.abs(npvTotal) / sumALCCEnergyGenerated; //EQROI-18
+			lcoe = Math.abs(npvCost) / sumALCCEnergyGenerated; //EQROI-18
 		}
 	}
 
@@ -530,7 +530,7 @@ public class LifecycleCostAnalysis {
 		
 		economicData[currentRow][0] = df0.format(lifecycleCostComponents.length+1);
 		economicData[currentRow][1] = "Scenario Equipment Totals";
-		economicData[currentRow][11] = df2.format(npvTotal);
+		economicData[currentRow][11] = df2.format(npvCost);
 		economicData[currentRow][12] = df2.format(totalATLCC);
 
 		return economicData;
@@ -557,9 +557,9 @@ public class LifecycleCostAnalysis {
 		economicSummaryData[2][0] = "Cost of Investment ($)";
 		economicSummaryData[2][1] = df2.format(-1*costOfInvestment);
 		economicSummaryData[3][0] = "Total Revenue (future value of all revenue and savings) ($)";
-		economicSummaryData[3][1] = df2.format(totalRevenue);
+		economicSummaryData[3][1] = df2.format(npvRevenue);
 		economicSummaryData[4][0] = "Net Present Value (NPV) ($)";
-		economicSummaryData[4][1] = df2.format(npvTotal + totalRevenue);
+		economicSummaryData[4][1] = df2.format(npvCost + npvRevenue);
 		economicSummaryData[5][0] = "Annual Worth (AW) ($/year)";
 		economicSummaryData[5][1] = df2.format(totalATLCC+annualTotalSavings);
 		economicSummaryData[6][0] = "Total life cycle energy generated (kWh)";
