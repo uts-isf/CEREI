@@ -8,7 +8,7 @@
 **CEREI** is an open-source Java desktop application designed to model the energy market using spot market charges, network and retailer tariffs, including associated losses for cost-effective renewable energy investments.
 
 CEREI presents a number of novelties and advantages:
-- To help industrial and commercial customers to reduce their energy costs and improve their environmental performance.
+- To help industrial and commercial customers to reduce their electrical energy bills and the distribution of the on-site generation behind-the-meter..
 - To help decision-makers within the industrial and commercial organisations to identify cost-effective renewable energy solutions.
 - To support the integration of renewable energy sources into existing power systems, and to facilitate the transition to a more sustainable energy system.
 
@@ -99,7 +99,7 @@ CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to 
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
 
 ## Developers
-Created on November 29, 2022
+Created on Marc 29, 2023
 Created by:
 - <a href="https://github.com/Ibrahim-a-Ibrahim" target="_blank">Ibrahim Anwar Ibrahim</a>
 - <a href="https://github.com/etanvah" target="_blank">Tanveer Choudhury</a>
