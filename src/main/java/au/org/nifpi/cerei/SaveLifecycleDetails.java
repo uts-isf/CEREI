@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 /**
  * Saves the detailed financial analysis to a .csv file 
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class SaveLifecycleDetails extends JButton implements ActionListener {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
@@ -202,7 +202,7 @@ public class SaveLifecycleDetails extends JButton implements ActionListener {
 	    		fw.newLine();
 	    	} catch (Exception ex) {
 		    	//Need to display a warning dialog with the error.
-		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"Engery Calculator Error saving Lifecycle Cost Analysis Summary to .csv file",JOptionPane.ERROR_MESSAGE); //
+		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"CEREI Error saving Lifecycle Cost Analysis Summary to .csv file",JOptionPane.ERROR_MESSAGE); //
 	        }
 	    }
 	}

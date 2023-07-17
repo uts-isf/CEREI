@@ -11,7 +11,7 @@ import java.util.Locale;
 /**
  * Dates in Energy Usage, Spot Price, Energy Used and Feed-in Tariff files have varying formats.  This class used to parse the various formats.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class DateParser {
 

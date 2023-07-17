@@ -14,7 +14,7 @@ import javax.swing.JTable;
  * Performs the lifecycle cost analysis of a proposal contained in the Lifecycle costs file, 
  * using additional savings and cost information if they have been calculated.
  *  
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class LifecycleCostAnalysis {
 	
@@ -66,6 +66,8 @@ public class LifecycleCostAnalysis {
 	/** Project levelised cose of energy (lcoe), calculated by dividing the NPV of the entire project by the Sum of all ALCC Energy Generated. */
 	protected double lcoe;
 	
+	/** Total amount of energy demanded.  0 if there are no costs, otherwise from costs.*/
+	protected double totalEnergyDemand;
 	/** Total amount of energy exported to the grid.  0 if there are no costs, otherwise from costs.*/
 	protected double totalAnnualEnergyExportedToGrid;
 	/** Total amount of energy generated.  0 if there are no costs, otherwise from costs.*/
@@ -476,7 +478,7 @@ public class LifecycleCostAnalysis {
 				annualTotalSavings += bau.totalsavingsMeter.monthly[k] * (Math.pow(1 + (monthlyInflationRate / 100), k)/Math.pow(1 + (monthlyj / 100), k)); // EQROI-16
 			}
 			for (int n = 1; n<= lifetime; n++) {
-				npvRevenue += annualTotalSavings*(Math.pow(1+(j/100), lifetime));
+				npvRevenue += annualTotalSavings*(Math.pow(1+(j/100), n));
 			}
 		}
 		
@@ -548,40 +550,52 @@ public class LifecycleCostAnalysis {
 		
 		String[] columnNames = {"Outcome","Value"};
 		//String[][] economicSummaryData = new String[10][2];
-		String[][] economicSummaryData = new String[11][2];
+		String[][] economicSummaryData = new String[17][2];
 		
-		economicSummaryData[0][0] = "Number of components";
+		economicSummaryData[0][0] = "Number of Components";
 		economicSummaryData[0][1] = df0.format(lifecycleCostComponents.length);
-		economicSummaryData[1][0] = "Period of analysis (years)";
+		economicSummaryData[1][0] = "Period of Analysis (years)";
 		economicSummaryData[1][1] = lifetimeString;
-		economicSummaryData[2][0] = "Cost of Investment ($)";
+		economicSummaryData[2][0] = "Initial Cost of Investment ($)";
 		economicSummaryData[2][1] = df2.format(-1*costOfInvestment);
-		economicSummaryData[3][0] = "Total Revenue (future value of all revenue and savings) ($)";
-		economicSummaryData[3][1] = df2.format(npvRevenue);
-		economicSummaryData[4][0] = "Net Present Value (NPV) ($)";
-		economicSummaryData[4][1] = df2.format(npvCost + npvRevenue);
-		economicSummaryData[5][0] = "Annual Worth (AW) ($/year)";
-		economicSummaryData[5][1] = df2.format(totalATLCC+annualTotalSavings);
-		economicSummaryData[6][0] = "Total life cycle energy generated (kWh)";
-		economicSummaryData[6][1] = df2.format(sumALCCEnergyGenerated);
-		economicSummaryData[7][0] = "Annual energy generated (kWh/year)";
-		economicSummaryData[7][1] = df2.format(totalAnnualEnergyGenerated);
-		economicSummaryData[8][0] = "Annual energy exported to the grid (kWh/year)";
-		economicSummaryData[8][1] = df2.format(totalAnnualEnergyExportedToGrid);
+		economicSummaryData[3][0] = "Present value of all costs ($)";
+		economicSummaryData[3][1] = df2.format(npvCost);
+		economicSummaryData[4][0] = "Present Value of Total Saving ($)";
+		economicSummaryData[4][1] = df2.format(npvRevenue);
+		economicSummaryData[5][0] = "Net Present Value (NPV) ($)";
+		economicSummaryData[5][1] = df2.format(-npvCost + npvRevenue);
+		economicSummaryData[6][0] = "Annual Life-cycle Cost ($/year)";
+		economicSummaryData[6][1] = df2.format(totalATLCC);
+		economicSummaryData[7][0] = "Average Annual Saving ($/year)";
+		economicSummaryData[7][1] = df2.format(npvRevenue/lifetime);
+		economicSummaryData[8][0] = "Annual Worth (AW) ($/year)";
+		economicSummaryData[8][1] = df2.format(-totalATLCC+annualTotalSavings);
+		economicSummaryData[9][0] = "Annual Energy Demand (kWh/year)";
+		economicSummaryData[9][1] = df2.format(totalGridUsed);
+		economicSummaryData[10][0] = "Total Life-cycle Energy Generated (kWh)";
+		economicSummaryData[10][1] = df2.format(sumALCCEnergyGenerated);
+		economicSummaryData[11][0] = "Annual Energy Generated (kWh/year)";
+		economicSummaryData[11][1] = df2.format(totalAnnualEnergyGenerated);
+		economicSummaryData[12][0] = "Annual Energy Used On-site from the DER (kWh/year)";
+		economicSummaryData[12][1] = df2.format(totalAnnualEnergyGenerated-totalAnnualEnergyExportedToGrid);
+		economicSummaryData[13][0] = "Annual Energy Exported to the Grid (kWh/year)";
+		economicSummaryData[13][1] = df2.format(totalAnnualEnergyExportedToGrid);
+		economicSummaryData[14][0] = "Annual Energy Imported from the Grid (kWh/year)";
+		economicSummaryData[14][1] = df2.format(totalGridUsed-(totalAnnualEnergyGenerated-totalAnnualEnergyExportedToGrid));
 		
-		economicSummaryData[9][0] = "Payback period (Years)";
+		economicSummaryData[15][0] = "Payback Period (Years)";
 		if (annualTotalSavings == 0) {
-			economicSummaryData[9][1] = "n/a";
+			economicSummaryData[15][1] = "n/a";
 		}
 		else {
-			economicSummaryData[9][1] = df2.format(paybackPeriod);
+			economicSummaryData[15][1] = df2.format(paybackPeriod);
 		}
-		economicSummaryData[10][0] = "Levelized Cost of Energy (LCOE) ($/kWh)";
+		economicSummaryData[16][0] = "Levelized Cost of Energy (LCOE) ($/kWh)";
 		if (lcoe == -1) {
-			economicSummaryData[10][1] = "n/a";
+			economicSummaryData[16][1] = "n/a";
 		}
 		else {
-			economicSummaryData[10][1] = df2.format(lcoe);
+			economicSummaryData[16][1] = df2.format(lcoe);
 		}
 
 		//Nice heading for table

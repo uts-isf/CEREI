@@ -4,7 +4,7 @@ package au.org.nifpi.cerei;
  * Holds summary cost OR PEI results for each meter.  
  * Could do with refactoring so that there is a base class with child classes for each of cost and PEI
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class MeterSummary {
 

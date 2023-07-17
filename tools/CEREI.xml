@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\james\Documents\Git\CEREI\dist\CEREI.jar</jar>
-  <outfile>C:\Users\james\Documents\Git\CEREI\dist\CEREI.exe</outfile>
+  <jar>CEREI\dist\CEREI.jar</jar>
+  <outfile>CEREI\dist\CEREI.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -25,11 +25,11 @@
     <fileVersion>1.0.0.0</fileVersion>
     <txtFileVersion>Version 1.0.0.0 23 June 2023</txtFileVersion>
     <fileDescription>Cost-Effective Renewable Energy Investments</fileDescription>
-    <copyright>James Sargeant 2023</copyright>
+    <copyright>Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License</copyright>
     <productVersion>1.0.0.0</productVersion>
     <txtProductVersion>Version 1.0.0.0 23 June 2023</txtProductVersion>
     <productName>Cost-Effective Renewable Energy Investments</productName>
-    <companyName>Federation University</companyName>
+    <companyName>University of Technology Sydney and Federation University</companyName>
     <internalName>Cost-Effective Renewable Energy Investments.</internalName>
     <originalFilename>CEREI.exe</originalFilename>
     <trademarks></trademarks>

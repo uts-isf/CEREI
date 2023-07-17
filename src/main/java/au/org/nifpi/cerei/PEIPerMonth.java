@@ -7,7 +7,7 @@ import java.time.Year;
  * Low level working class that provides most of the detail functionality used to calculate PEIs
  * Could do with refactoring to separate out Cost and PEI with some commonality in a yet to be designed parent class
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class PEIPerMonth {
 	// Monthly rates determined from Meter Montly Paramters which are loaded from Tariff file

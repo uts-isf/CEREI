@@ -16,7 +16,7 @@ import javax.swing.table.TableColumn;
 /**
  * Panel that holds all the results of the EnergyCalculator calculations - added as a tab in the JTabbedPane in the gui.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class ResultsPanel extends JPanel {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely. */

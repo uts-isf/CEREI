@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 /**
  * Simple button that triggers Calculation
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class GoButton extends JButton implements ActionListener {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
@@ -84,7 +84,7 @@ public class GoButton extends JButton implements ActionListener {
 		// All the errors have been shown.
 	
 		if (showErrorDialog) {
-			JOptionPane.showMessageDialog(UI,errorDialog,"Engery Calculator Error",JOptionPane.ERROR_MESSAGE); 
+			JOptionPane.showMessageDialog(UI,errorDialog,"CEREI Error",JOptionPane.ERROR_MESSAGE); 
 			return;
 		}
 

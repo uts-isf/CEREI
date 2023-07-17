@@ -3,7 +3,7 @@ package au.org.nifpi.cerei;
 /**
  * Collect the per month parameters that apply to all meters
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class Parameter {
 	/** Month for which parameters apply */

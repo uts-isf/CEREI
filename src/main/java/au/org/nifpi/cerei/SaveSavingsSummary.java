@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 /**
  * Saves the data in the CostSavings summary JTable (displayed on one of the GUI panes) to a .csv file 
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class SaveSavingsSummary extends JButton implements ActionListener {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
@@ -104,7 +104,7 @@ public class SaveSavingsSummary extends JButton implements ActionListener {
 	            }
 	        } catch (Exception ex) {
 		    	//Need to display a warning dialog with the error.
-		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"Engery Calculator Error",JOptionPane.ERROR_MESSAGE); //
+		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"CEREI Error",JOptionPane.ERROR_MESSAGE); //
 	        }
 	    }
 	}

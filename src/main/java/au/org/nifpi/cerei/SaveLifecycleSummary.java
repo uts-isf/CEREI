@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 /**
  * Saves the data in the Lifecycle Cost Analysis summary Jtable (displayed on one of the GUI panes) to a .csv file
  *  
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class SaveLifecycleSummary extends JButton implements ActionListener {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
@@ -94,29 +94,42 @@ public class SaveLifecycleSummary extends JButton implements ActionListener {
 	    		fw.write("Summary for "+defaultName);
 	    		fw.newLine();
 	            fw.newLine();
-	            fw.write("Number of components," + UI.lifecylce.lifecycleCostComponents.length);
+	            fw.write("Number of Components," + UI.lifecylce.lifecycleCostComponents.length);
 	            fw.newLine();
-	            fw.write("Period of analysis (years)," + UI.lifecylce.lifetimeString);
+	            fw.write("Period of Analysis (years)," + UI.lifecylce.lifetimeString);
 	            fw.newLine();
-	            fw.write("Cost of Investment ($)," + df2.format(-1*UI.lifecylce.costOfInvestment));
+	            fw.write("Initial Cost of Investment ($)," + df2.format(-1*UI.lifecylce.costOfInvestment));
 	            fw.newLine();
-	            fw.write("Total Revenue (future value of all revenue and savings) ($)," + df2.format(UI.lifecylce.npvRevenue));
+	            fw.write("Present Value of All Costs ($)," + df2.format(UI.lifecylce.npvCost));
+	            fw.newLine();
+	            fw.write("Present Value of Total Saving ($)," + df2.format(UI.lifecylce.npvRevenue));
 	            fw.newLine();
 	            fw.write("Net Present Value (NPV) ($)," + df2.format(UI.lifecylce.npvCost + UI.lifecylce.npvRevenue));
 	            fw.newLine();
+	            fw.write("Annual Life-cycle Cost ($/year)," + df2.format(UI.lifecylce.totalATLCC));
+	            fw.newLine();
+	            fw.write("Annual Life-cycle Saving ($/year)," + df2.format(UI.lifecylce.npvRevenue/UI.lifecylce.lifetime));
+	            fw.newLine();
 	            fw.write("Annual Worth (AW) ($/year)," + df2.format(UI.lifecylce.totalATLCC + UI.lifecylce.annualTotalSavings));
 	            fw.newLine();
-	            fw.write("Total life cycle energy generated (kWh)," + df2.format(UI.lifecylce.sumALCCEnergyGenerated));
+	            fw.write("Annual Energy Demand (kWh/year)," + df2.format(UI.lifecylce.totalGridUsed));
 	            fw.newLine();
-	            fw.write("Annual energy generated (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyGenerated));
+	            fw.write("Total Life-cycle Energy Generated (kWh)," + df2.format(UI.lifecylce.sumALCCEnergyGenerated));
 	            fw.newLine();
-	            fw.write("Annual energy exported to the grid (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyExportedToGrid));
+	            fw.write("Annual Energy Generated (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyGenerated));
 	            fw.newLine();
+	            fw.write("Annual Energy Used On-site from the DER (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyGenerated - UI.lifecylce.totalAnnualEnergyExportedToGrid));
+	            fw.newLine();
+	            fw.write("Annual Energy Exported to the Grid (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyExportedToGrid));
+	            fw.newLine();
+	            fw.write("Annual Energy Imported from the Grid (kWh/year)," + df2.format(UI.lifecylce.totalGridUsed-(UI.lifecylce.totalAnnualEnergyGenerated-UI.lifecylce.totalAnnualEnergyExportedToGrid)));
+	            fw.newLine();
+	            
 	            if (UI.lifecylce.annualTotalSavings == 0) {
-		            fw.write("Payback period (Years),n/a");
+		            fw.write("Payback Period (Years),n/a");
 	    		}
 	    		else {
-	    			fw.write("Payback period (Years)," + df2.format(UI.lifecylce.paybackPeriod));
+	    			fw.write("Payback Period (Years)," + df2.format(UI.lifecylce.paybackPeriod));
 	    		}
 	            fw.newLine();
 	    		if (UI.lifecylce.lcoe == -1) {
@@ -129,7 +142,7 @@ public class SaveLifecycleSummary extends JButton implements ActionListener {
 	        } 
 	    	catch (Exception ex) {
 		    	//Need to display a warning dialog with the error.
-		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"Engery Calculator Error saving Lifecycle Cost Analysis Summary to .csv file",JOptionPane.ERROR_MESSAGE); //
+		    	JOptionPane.showMessageDialog(UI,ex.getMessage(),"CEREI Error Saving Life-cycle Cost Analysis Summary to .csv file",JOptionPane.ERROR_MESSAGE); //
 	        }
 	    }
 	}

@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 /**
  * Individual components of a project for the purposes of conducting a financial analysis of a project.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class LifecycleCostComponent {
 

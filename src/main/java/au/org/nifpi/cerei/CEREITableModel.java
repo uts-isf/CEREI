@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
 /**
  * Extension of the Default Table Model so Cells cannot be edited.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class CEREITableModel extends DefaultTableModel {
 	

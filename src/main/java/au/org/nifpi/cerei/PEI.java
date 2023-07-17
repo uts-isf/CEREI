@@ -10,7 +10,7 @@ import java.util.List;
  * Simply calculates the PEI from the relevant information.
  * TO DO - Refactor. Contains a lot of duplicated code here and also in Cost.  
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class PEI {
 

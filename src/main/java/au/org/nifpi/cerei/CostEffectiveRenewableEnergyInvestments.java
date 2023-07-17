@@ -25,7 +25,7 @@ import javax.swing.UIManager;
  * Cost-Effective Renewable Energy Investments --- Program to process and display Electrical Energy costs,
  * efficiencies, savings and return on investment.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
@@ -366,7 +366,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 				// Costs.
 				CEREITableModel costTableModel = cost
 						.createSummaryCostTableModel();
-				costResults.resultPanelText.setText("All values in $");
+				costResults.resultPanelText.setText("All values in $ (Positive $ values indicate Cost and Negative $ values indicate Credit)");
 				costResults.resultTable.setModel(costTableModel);
 				costResults.formatResultTable();
 				saveCostSummary.setEnabled(true);
@@ -376,7 +376,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 				if (pei != null) {
 					CEREITableModel peiTableModel = pei
 							.createSummaryPEITableModel();
-					peiResults.resultPanelText.setText("PEI");
+					peiResults.resultPanelText.setText("PEI value > 1 indicates higher operating cost and PEI < 1 indicates the effective economic operation");
 					peiResults.resultTable.setModel(peiTableModel);
 					peiResults.formatResultTable();
 					savePeiSummary.setEnabled(true);
@@ -455,7 +455,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 					// Costs.
 					CEREITableModel costTableModel = cost
 							.createSummaryCostTableModel();
-					costResults.resultPanelText.setText("All values in $");
+					costResults.resultPanelText.setText("All values in $ (Positive $ values indicate Cost and Negative $ values indicate Credit)");
 					costResults.resultTable.setModel(costTableModel);
 					costResults.formatResultTable();
 					saveCostSummary.setEnabled(true);
@@ -465,7 +465,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 					if (pei != null) {
 						CEREITableModel peiTableModel = pei
 								.createSummaryPEITableModel();
-						peiResults.resultPanelText.setText("PEI");
+						peiResults.resultPanelText.setText("PEI value > 1 indicates higher operating cost and PEI < 1 indicates the effective economic operation");
 						peiResults.resultTable.setModel(peiTableModel);
 						peiResults.formatResultTable();
 						savePeiSummary.setEnabled(true);
@@ -492,7 +492,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 			try {
 				bau = new BusinessAsUsual(bauFile); 
 				CEREITableModel savingsTableModel = bau.createSavingCostTableModel(cost);
-				savingsResults.resultPanelText.setText("All values in $");
+				savingsResults.resultPanelText.setText("All values in $ (Positive $ values indicate Saving and Negative $ values indicate extra Cost over the BAU Energy Bill)");
 				savingsResults.resultTable.setModel(savingsTableModel);
 				savingsResults.formatResultTable();
 				saveSavingsSummary.setEnabled(true);
@@ -544,7 +544,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 		
 		// Let the user know we're done
 		if( !bauError && !lifecycleError) {
-			JOptionPane.showMessageDialog(this,"Calculations Complete.\nResults in relevant tabs","Engery Calculator",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this,"Calculations Complete.\nResults in relevant tabs","CEREI",JOptionPane.INFORMATION_MESSAGE);
 		}
 		else {
 			String completionString = "Calculations Complete\n";
@@ -555,7 +555,7 @@ public class CostEffectiveRenewableEnergyInvestments extends JFrame {
 				completionString = completionString.concat("Errors in Lifecycle cost calculations\n");
 			}
 			completionString = completionString.concat("Other results in relevant tabs");
-			JOptionPane.showMessageDialog(this,completionString,"Engery Calculator",JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(this,completionString,"CEREI",JOptionPane.WARNING_MESSAGE);
 		}
 	}
 

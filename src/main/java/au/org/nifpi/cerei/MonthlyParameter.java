@@ -3,7 +3,7 @@ package au.org.nifpi.cerei;
 /**
  * Collect the per meter per month parameters of Loss Ratio Demand Capacity Usage and Demand Critical Peak Usage
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class MonthlyParameter {
 	/** month not currently used - here to be used to match months */

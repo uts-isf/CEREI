@@ -10,7 +10,7 @@ import java.util.List;
  * Calculates and Summarises Cost data from the Source Usage and Spot Price .csv files
  * TO DO - Refactor. Contains a lot of duplicated code here and also in PEI.  
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class Cost {
 
@@ -130,11 +130,12 @@ public class Cost {
 			// meters that have not been adjusted still have their initial values.
 			for (int i=0; i<usageSt.length-1; i++) {
 				adjustedUsageSt[i] = Double.parseDouble(usageSt[i+1]);   // +1 as first entry in usageSt is the datestamp
+				totalGridUsed += adjustedUsageSt[i]; // Accumulate total grid used before any deductions from generated energy
 			}
 			double adjustedGeneratedSt[] = new double[usageSt.length-1]; // -1 because usageSt has an additional datestamp at the start.
 			// first determine the total amount of generated energy to distributed
 			for (int i=1; i<generatedSt.length; i++) { // i=1 as first entry in generatedSt is the datestamp
-				generatedEnergy += Double.parseDouble(generatedSt[i])/2;
+				generatedEnergy += Double.parseDouble(generatedSt[i])/2; // Divide by 2 contentious, should not be divide by 2 if generated energy is kWh.
 			}
 
 			totalGenerated += generatedEnergy;
@@ -156,7 +157,7 @@ public class Cost {
 			
 			//If there is any generated energy left add it to the adjustedGeneratedSt of the first meter in the network Parameters distribution list
 			if (generatedEnergy >0) {
-				adjustedGeneratedSt[meterNames.indexOf(networkParameters.distributionMeters.get(0))] = generatedEnergy;
+				adjustedGeneratedSt[meterNames.indexOf(networkParameters.distributionMeters.get(0))] += generatedEnergy;
 			}
 			// Now iterate over meters calling costsPerMonth[i][month].addUnitOfCharges.
 			for (int i = 0; i < meterNames.size(); i++) {
@@ -182,7 +183,7 @@ public class Cost {
 				// If this meter has a generated energy component
 				if (generatedMeterMap != null && generatedMeterMap.containsKey(i)) {
 					int index = generatedMeterMap.get(i);
-					generatedEnergy = Double.parseDouble(generatedSt[index])/2;
+					generatedEnergy = Double.parseDouble(generatedSt[index])/2; // Divide by 2 contentious, should not be divide by 2 if generated energy is kWh.
 					// generatedEnergy=Double.parseDouble(generatedSt[generatedMeterMap.get(i)]);
 					totalGenerated += generatedEnergy;
 				}

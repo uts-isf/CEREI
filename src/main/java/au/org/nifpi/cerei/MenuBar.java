@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 /**
  * A simple menu bar on the top of the energy calculator
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class MenuBar extends JMenuBar implements ActionListener {
 	

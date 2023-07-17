@@ -11,7 +11,7 @@ import java.util.Locale;
  * Loads the various tariffs, per monthly and per meter per monthly from the "Network Tariff" input file
  * TO DO - Validation of all fields in the input file.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class NetworkParameter {
 

@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  * Cell Renderer that makes sure that all rows with a "Year" of 20xx, all rows with Quarter of "Qx" and all columns that contain the word "total" (in any case
  * are bolded.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class CEREITableCellRenderer extends DefaultTableCellRenderer {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/

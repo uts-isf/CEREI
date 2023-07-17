@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 /**
  * 12 months worth of parameters that pertain to a particular meter.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class Meter {
 	/** Meter Name */

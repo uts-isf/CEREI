@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Generate the savings associated with moving to a different tariff plan and from generating own energy.
  *
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class BusinessAsUsual {
 

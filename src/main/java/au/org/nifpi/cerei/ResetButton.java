@@ -11,7 +11,7 @@ import javax.swing.JButton;
 /**
  * Simple button that triggers reset of input files.
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class ResetButton extends JButton implements ActionListener {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/

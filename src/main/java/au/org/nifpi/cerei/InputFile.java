@@ -14,7 +14,7 @@ import javax.swing.SwingConstants;
 /**
  * Creates a JPanel containing a JButton and a Label below the button.  The button is used to kick off a dialog to open an input file 
  * 
- * @author James Sargeant
+ * @author Copyright (c) 2023 University of Technology Sydney and Federation University under MIT License.
  */
 public class InputFile extends JPanel {
 	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
