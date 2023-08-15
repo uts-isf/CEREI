@@ -17,7 +17,7 @@ import static javax.swing.GroupLayout.Alignment.CENTER;
  */
 public class AboutDialog extends JDialog {
 	
-	/** Serialised Version ID.  For if this class ever needs to be serialised - unlikely*/
+	/** Serialized Version ID.  For if this class ever needs to be serialised - unlikely*/
 	private static final long serialVersionUID = 2023062301L;
 
 	/** Text that appears in the title of the About modal*/
