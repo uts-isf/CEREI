@@ -1,0 +1,78 @@
+# Investment name is mandatory,,
+Investment Name,Biopower,
+,,
+"# Lifetime, Discount Rate and Inflation Rate are all mandatory",,
+Lifetime,30,years
+Discount Rate,5.5,
+Inflation Rate,1.79,
+Degradation Rate,4,
+,,
+# There must be at one Component that can have the following optional or mandatory parameters.  Each component must be followed by an empty row.,,
+# Component,Mandatory ,Component Name
+# Cost Code,Optional,Can be a specific string to match accounting cost codes - defaults to the next number in sequence
+# Number of Units,Optional,Defaults to 1
+# Capital Cost,Optional,"Note that there must be at least one of Capital Cost, Installation Cost, Fixed O&M Ccst, Replacement Cost or Future Cost"
+# Installation Cost,Optional,
+# Fixed O&M Cost,Optional,
+# Replacement Cost,Optional,Requires a thrid parameter - replacement freqeuncy
+# Future Cost,Optional,Requires a thrid parameter - future freqeuncy
+#Discount Rate,Optional,Defaults to project Discount Rate
+#Inflation Rate,Optional,Defaults to project Inflation Rate
+,,
+Component,Component 1,
+Number of Units,2,
+Capital Cost,185000,each
+Installation Cost,40000,each
+,,
+Component,Component 2,
+Number of Units,4,
+Capital Cost,320000,each
+Installation Cost,128000,each
+,,
+Component,Component 3,
+Number of Units,1.8,
+Capital Cost,32400,each
+Installation Cost,12960,each
+,,
+Component,Component 4,
+Number of Units,1,
+Capital Cost,300000,each
+Installation Cost,120000,each
+Replacement Cost,420000,20
+,,
+Component,Component 5,
+Number of Units,1,
+Capital Cost,120000,each
+Installation Cost,48000,each
+Replacement Cost,168000,20
+,,
+Component,Component 6,
+Number of Units,1,
+Capital Cost,1860890,each
+Installation Cost,744356,each
+Fixed O&M Cost,260081,each
+Replacement Cost,2605246,15
+Discount Rate,4.9,
+,,
+Component,Component 7,
+Number of Units,1,
+Capital Cost,5980000,each
+Installation Cost,2272400,each
+Replacement Cost,8252400,20
+Discount Rate,4.9,
+,,
+Component,Component 8,
+Number of Units,1,
+Capital Cost,5000,each
+Installation Cost,2000,each
+Replacement Cost,7000,15
+Discount Rate,4.9,
+,,
+Component,Component 9,
+Number of Units,1,
+Fixed O&M Cost,83892,each
+Discount Rate,4.9,
+,,
+Component,Component 10,
+Number of Units,1,
+Fixed O&M Cost,7000,each
