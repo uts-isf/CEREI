@@ -34,7 +34,7 @@ CEREI presents a number of novelties and advantages:
 - The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
     - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains `module-info.java` file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
     - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
-- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains `CEREI.xml` file used which is by Launch4j to create the cerei.exe file from the `cerei.jar` file (`cerei.jar` is created from the source code).
+- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains `CEREI.xml` file used which is by Launch4j to create the `cerei.exe` file from the `cerei.jar` file (`cerei.jar` is created from the source code).
 - The [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
 - The [app](https://github.com/uts-isf/CEREI/tree/main/app) folder: It contains the executable file and the associated folders for the current version.
 - The [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
