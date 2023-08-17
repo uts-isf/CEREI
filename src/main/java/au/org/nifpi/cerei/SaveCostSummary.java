@@ -36,7 +36,7 @@ public class SaveCostSummary extends JButton implements ActionListener {
 	}
 
 	/**
-	 * Save the Cost Summary file when button is clicked.
+	 * Save the Energy Bill Summary file when button is clicked.
 	 * 
 	 * @param e Button click.
 	 */
@@ -47,7 +47,7 @@ public class SaveCostSummary extends JButton implements ActionListener {
         chooser.setAcceptAllFileFilterUsed(false);
 
         // Default file name
-        chooser.setSelectedFile(new File("Cost Summary "+UI.cost.costsPerMonth[0][0].year + " "+UI.networkParameters.tariffName+".csv"));
+        chooser.setSelectedFile(new File("Energy Bill Summary "+UI.cost.costsPerMonth[0][0].year + " "+UI.networkParameters.tariffName+".csv"));
         
 	    int retrival = chooser.showSaveDialog(null);
 	    //Only proceed if user clicks on "Save"
@@ -67,7 +67,7 @@ public class SaveCostSummary extends JButton implements ActionListener {
 	    	
 	    	// Output the contents of the Cost Summary JTable data structure.
 	    	try(BufferedWriter fw = new BufferedWriter(new FileWriter(summaryFile))) {
-	            fw.write("Cost Summary for "+UI.cost.costsPerMonth[0][0].year + " using tariff "+UI.networkParameters.tariffName);
+	            fw.write("Energy Bill Summary for "+UI.cost.costsPerMonth[0][0].year + " using tariff "+UI.networkParameters.tariffName);
 	            fw.newLine();
 	            fw.newLine();
 	            String[] summaryHeader = UI.cost.getColumnNames();

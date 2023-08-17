@@ -31,8 +31,8 @@ public class Cost {
 
 	/** Accumulate 30 min power generated for the year in kWh */ 
 	protected double totalGenerated=0;
-	/** Accumulate 30 minute power from the grid before making deductions for generation in kWh */
-	protected double totalGridUsed=0;
+	/** Accumulate 30 minute power demand before making deductions for generation in kWh */
+	protected double totalDemand=0;
 
 	/** Generates a String with two decimal places and commas. Minimum of one whole number and two decimal places. */
 	private static final DecimalFormat df = new DecimalFormat("#,###.00");  // Number of decimal places in summary tabs.
@@ -130,7 +130,7 @@ public class Cost {
 			// meters that have not been adjusted still have their initial values.
 			for (int i=0; i<usageSt.length-1; i++) {
 				adjustedUsageSt[i] = Double.parseDouble(usageSt[i+1]);   // +1 as first entry in usageSt is the datestamp
-				totalGridUsed += adjustedUsageSt[i]; // Accumulate total grid used before any deductions from generated energy
+				totalDemand += adjustedUsageSt[i]; // Accumulate total grid used before any deductions from generated energy
 			}
 			double adjustedGeneratedSt[] = new double[usageSt.length-1]; // -1 because usageSt has an additional datestamp at the start.
 			// first determine the total amount of generated energy to distributed
@@ -177,7 +177,7 @@ public class Cost {
 					usedEnergy = 0;
 				} else {
 					usedEnergy = Double.parseDouble(usageSt[i + 1]);
-					totalGridUsed += usedEnergy;
+					totalDemand += usedEnergy;
 				}
 				// Find the relevant generated energy meter reading (if any) for this meter
 				// If this meter has a generated energy component

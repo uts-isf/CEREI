@@ -39,7 +39,7 @@ public class SaveCostDetails extends JButton implements ActionListener {
 	}
 
 	/**
-	 * Save the Cost Summary file when button is clicked.
+	 * Save the Energy Bill Details file when button is clicked.
 	 * 
 	 * @param e Button click.
 	 */
@@ -48,7 +48,7 @@ public class SaveCostDetails extends JButton implements ActionListener {
 	    JFileChooser chooser = new JFileChooser();
         chooser.addChoosableFileFilter(new InputTypeFilter());
         chooser.setAcceptAllFileFilterUsed(false);
-        chooser.setSelectedFile(new File("Cost Details "+UI.cost.costsPerMonth[0][0].year + " "+UI.networkParameters.tariffName+".csv"));
+        chooser.setSelectedFile(new File("Energy Bill Details "+UI.cost.costsPerMonth[0][0].year + " "+UI.networkParameters.tariffName+".csv"));
         
 	    int retrival = chooser.showSaveDialog(null);
 	    if (retrival == JFileChooser.APPROVE_OPTION) {
@@ -63,7 +63,7 @@ public class SaveCostDetails extends JButton implements ActionListener {
 	    	    }
 	    	}
 	        try(BufferedWriter fw = new BufferedWriter(new FileWriter(summaryFile))) {
-	            fw.write("Details for "+UI.cost.costsPerMonth[0][0].year + " using tariff "+UI.networkParameters.tariffName);
+	            fw.write("Energy Bill Details for "+UI.cost.costsPerMonth[0][0].year + " using tariff "+UI.networkParameters.tariffName);
 	            fw.newLine();
 	            fw.newLine();
 
