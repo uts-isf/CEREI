@@ -112,7 +112,7 @@ public class SaveLifecycleSummary extends JButton implements ActionListener {
 	            fw.newLine();
 	            fw.write("Annual Worth (AW) ($/year)," + df2.format(UI.lifecylce.totalATLCC + UI.lifecylce.annualTotalSavings));
 	            fw.newLine();
-	            fw.write("Annual Energy Demand (kWh/year)," + df2.format(UI.lifecylce.totalGridUsed));
+	            fw.write("Annual Energy Demand (kWh/year)," + df2.format(UI.lifecylce.totalEnergyDemand));
 	            fw.newLine();
 	            fw.write("Total Life-cycle Energy Generated (kWh)," + df2.format(UI.lifecylce.sumALCCEnergyGenerated));
 	            fw.newLine();
@@ -122,7 +122,7 @@ public class SaveLifecycleSummary extends JButton implements ActionListener {
 	            fw.newLine();
 	            fw.write("Annual Energy Exported to the Grid (kWh/year)," + df2.format(UI.lifecylce.totalAnnualEnergyExportedToGrid));
 	            fw.newLine();
-	            fw.write("Annual Energy Imported from the Grid (kWh/year)," + df2.format(UI.lifecylce.totalGridUsed-(UI.lifecylce.totalAnnualEnergyGenerated-UI.lifecylce.totalAnnualEnergyExportedToGrid)));
+	            fw.write("Annual Energy Imported from the Grid (kWh/year)," + df2.format(UI.lifecylce.totalEnergyDemand-(UI.lifecylce.totalAnnualEnergyGenerated-UI.lifecylce.totalAnnualEnergyExportedToGrid)));
 	            fw.newLine();
 	            
 	            if (UI.lifecylce.annualTotalSavings == 0) {

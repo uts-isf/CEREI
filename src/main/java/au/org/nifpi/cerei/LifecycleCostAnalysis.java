@@ -72,8 +72,6 @@ public class LifecycleCostAnalysis {
 	protected double totalAnnualEnergyExportedToGrid;
 	/** Total amount of energy generated.  0 if there are no costs, otherwise from costs.*/
 	protected double totalAnnualEnergyGenerated;
-	/** Total amount of energy used from the grid.  0 if there are no costs, otherwise from costs.*/
-	protected double totalGridUsed;
 
 	/** Project components */
 	protected LifecycleCostComponent[] lifecycleCostComponents;
@@ -425,7 +423,7 @@ public class LifecycleCostAnalysis {
 
 		totalAnnualEnergyExportedToGrid = cost==null?0:Math.abs(cost.calculateEnergyExported());
 		totalAnnualEnergyGenerated = cost==null?0:Math.abs(cost.calculateEnergyGenerated());
-		totalGridUsed = cost==null?0:Math.abs(cost.totalGridUsed);
+		totalEnergyDemand = cost==null?0:Math.abs(cost.totalDemand);
 		
 		for (int n=1; n<=lifetime; n++) { //EQROI-1
 			sumALCCEnergyGenerated +=  totalAnnualEnergyGenerated*Math.pow(1-(degradationRate/100), (double) n)/Math.pow(1+(discountRate/100), (double) n);
@@ -571,7 +569,7 @@ public class LifecycleCostAnalysis {
 		economicSummaryData[8][0] = "Annual Worth (AW) ($/year)";
 		economicSummaryData[8][1] = df2.format(-totalATLCC+annualTotalSavings);
 		economicSummaryData[9][0] = "Annual Energy Demand (kWh/year)";
-		economicSummaryData[9][1] = df2.format(totalGridUsed);
+		economicSummaryData[9][1] = df2.format(totalEnergyDemand);
 		economicSummaryData[10][0] = "Total Life-cycle Energy Generated (kWh)";
 		economicSummaryData[10][1] = df2.format(sumALCCEnergyGenerated);
 		economicSummaryData[11][0] = "Annual Energy Generated (kWh/year)";
@@ -581,7 +579,7 @@ public class LifecycleCostAnalysis {
 		economicSummaryData[13][0] = "Annual Energy Exported to the Grid (kWh/year)";
 		economicSummaryData[13][1] = df2.format(totalAnnualEnergyExportedToGrid);
 		economicSummaryData[14][0] = "Annual Energy Imported from the Grid (kWh/year)";
-		economicSummaryData[14][1] = df2.format(totalGridUsed-(totalAnnualEnergyGenerated-totalAnnualEnergyExportedToGrid));
+		economicSummaryData[14][1] = df2.format(totalEnergyDemand-(totalAnnualEnergyGenerated-totalAnnualEnergyExportedToGrid));
 		
 		economicSummaryData[15][0] = "Payback Period (Years)";
 		if (annualTotalSavings == 0) {
