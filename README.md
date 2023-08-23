@@ -34,7 +34,8 @@ CEREI presents a number of novelties and advantages:
 - The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
     - [./main/java/](https://github.com/uts-isf/CEREI/tree/main/src/main/java): It contains `module-info.java` file which is used to create the minimal java runtime environment so that the program can run without the need to install java.
     - [./main/java/au/org/nifpi/cerei/](https://github.com/uts-isf/CEREI/tree/main/src/main/java/au/org/nifpi/cerei): It contains the source code.
-- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains `CEREI.xml` file used which is by Launch4j to create the `cerei.exe` file from the `cerei.jar` file (`cerei.jar` is created from the source code).
+- The [build](https://github.com/uts-isf/CEREI/tree/main/build) folder: It contains `cerei.jar` file used to create the `cerei.exe` file and it contains the [classes](https://github.com/uts-isf/CEREI/tree/main/build/classes/au/org/nifpi/cerei) folder which has the templates used to create objects and to define object data types and methods in the tool.
+- The [tools](https://github.com/uts-isf/CEREI/tree/main/tools) folder: It contains `CEREI.xml` file which is used by Launch4j to create the `cerei.exe` file from the `cerei.jar` file (`cerei.jar` is created from the source code and it is stored in ).
 - The [docs](https://github.com/uts-isf/CEREI/tree/main/docs) folder: It contains the source code documentation produced by Javadoc (APIs that provide documentation for subsequent developers).
 - The [app](https://github.com/uts-isf/CEREI/tree/main/app) folder: It contains the executable file and the associated folders for the current version.
 - The [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
@@ -80,7 +81,7 @@ The tool is composed of several internal modules, receives a number of files as 
 
 ## User interface
 
-![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/b171be19-4f47-4789-baab-8b0f1de011c6)
+![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/154993af-d448-4b09-953f-03d08eb3658c)
 
 ## CERI operation
 
@@ -93,7 +94,7 @@ The user needs to click on the “***Reset Input Files***” button to reset all
 If any individual file(s) needs to be replaced, then only the relevant button(s) (within the ***red*** highlighted box in the Figure below) needs to be clicked to select the new file.
     
 CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation). 
-![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/0bb0b838-47f7-4b54-afe2-a06d2e45e69c)
+![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/53155760-d4e1-4997-9aca-5a66506ac95c)
 
 ## Documentation
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
