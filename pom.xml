@@ -13,8 +13,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>  <!-- Updated to 11 -->
-    <maven.compiler.target>11</maven.compiler.target>  <!-- Updated to 11 -->
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -38,15 +38,24 @@
                 <target>${maven.compiler.target}</target>
             </configuration>
         </plugin>
-        <!-- ... other plugins ... -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- ... other plugins ... -->
+        <!-- Include other plugins as needed -->
       </plugins>
     </pluginManagement>
   </build>
+
+  <!-- Distribution Management section for GitHub Packages deployment -->
+  <distributionManagement>
+    <repository>
+        <id>github</id>
+        <name>GitHub UTS-ISF CEREI Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/uts-isf/CEREI</url>
+    </repository>
+  </distributionManagement>
+
   <organization>
   	<name>National Institute for Forest Products Innovation</name>
   	<url>https://nifpi.org.au/</url>
