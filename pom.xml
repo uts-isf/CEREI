@@ -38,6 +38,11 @@
                 <source>9</source> <!-- or higher, e.g., 11, 16, etc. -->
                 <target>9</target> <!-- or higher, e.g., 11, 16, etc. -->
             </configuration>
+            <properties>
+                <!-- ... other properties ... -->
+                <maven.compiler.source>9</maven.compiler.source>
+                <maven.compiler.target>9</maven.compiler.target>
+            </properties>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -47,10 +52,6 @@
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
