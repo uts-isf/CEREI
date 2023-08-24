@@ -30,6 +30,15 @@
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version> <!-- or newer version if available -->
+            <configuration>
+                <source>9</source> <!-- or higher, e.g., 11, 16, etc. -->
+                <target>9</target> <!-- or higher, e.g., 11, 16, etc. -->
+            </configuration>
+        </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
@@ -68,14 +77,6 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-        <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source> 
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
       </plugins>
     </pluginManagement>
   </build>
