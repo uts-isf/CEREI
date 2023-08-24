@@ -18,6 +18,8 @@ jobs:
       packages: write
 
     steps:
+    - name: Step 0 - Generate settings.xml for Maven Builds
+      uses: whelk-io/maven-settings-xml-action@v21      
     - name: Step 1 - Check main branch from GitHub
       uses: actions/checkout@v3
     - name: Step 2 - Set up JDK 11
@@ -42,4 +44,4 @@ jobs:
     - name: Step 6 - Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{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}}
