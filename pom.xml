@@ -7,6 +7,7 @@
   <groupId>au.nifpi</groupId>
   <artifactId>CEREI</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>CEREI</name>
   <url>https://nifpi.org.au/</url>
@@ -36,6 +37,7 @@
             <configuration>
                 <source>${maven.compiler.source}</source>
                 <target>${maven.compiler.target}</target>
+                <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
             </configuration>
         </plugin>
         <plugin>
