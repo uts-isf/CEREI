@@ -17,9 +17,7 @@ jobs:
       contents: read
       packages: write
 
-    steps:
-    - name: Step 0 - Generate settings.xml for Maven Builds
-      uses: whelk-io/maven-settings-xml-action@v21      
+    steps: 
     - name: Step 1 - Check main branch from GitHub
       uses: actions/checkout@v3
     - name: Step 2 - Set up JDK 11
