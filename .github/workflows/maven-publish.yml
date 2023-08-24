@@ -44,4 +44,4 @@ jobs:
     - name: Step 6 - Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{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}}
+        GITHUB_TOKEN: ${{ github.token }}
