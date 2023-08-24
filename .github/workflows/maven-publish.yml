@@ -6,6 +6,8 @@ name: Maven Package
 on:
   release:
     types: [created]
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -32,10 +34,10 @@ jobs:
     - name: Step 4 - List the current directory
       run: ls -a
       
-    - name: Step 5 - What is in the target folder?
+    - name: Step 5 - What is in the build folder?
       run: |
-        cd target
-        ls -1
+        cd build
+        ls -a
         
     - name: Step 6 - Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
