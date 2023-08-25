@@ -36,7 +36,7 @@ jobs:
       
     - name: Step 5 - What is in the build folder?
       run: |
-        cd build
+        cd target
         ls -a
         
     - name: Step 6 - Publish to GitHub Packages Apache Maven
