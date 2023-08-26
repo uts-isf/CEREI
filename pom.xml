@@ -13,18 +13,18 @@
   <url>https://nifpi.org.au/</url>
 
   <scm>
-      <url>{https://github.com/uts-isf/CEREI.git}</url> <!-- URL HTTP de clone do projeto -->
-      <connection>scm:git:{https://github.com/uts-isf/CEREI.git}</connection> <!-- URL HTTP de clone do projeto -->
-      <developerConnection>scm:git:{https://github.com/uts-isf/CEREI.git}</developerConnection> <!-- URL HTTP de clone do projeto -->
-      <tag>@{project.version}</tag>
+      <url>https://github.com/uts-isf/CEREI.git</url> <!-- Clone URL for the project -->
+      <connection>scm:git:https://github.com/uts-isf/CEREI.git</connection> <!-- Clone URL for the project -->
+      <developerConnection>scm:git:https://github.com/uts-isf/CEREI.git</developerConnection> <!-- Clone URL for the project -->
+      <tag>${project.version}</tag>
   </scm>
   
   <properties>
     <java.version>11</java.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target> 
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target> 
   </properties>
 
   <build>
