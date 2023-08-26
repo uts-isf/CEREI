@@ -29,6 +29,8 @@ CEREI presents a number of novelties and advantages:
        * [Bug reporting and bug fixing](#bug-reporting-and-bug-fixing)
        * [New features and enhancements](#new-features-and-enhancements)
    * [License](#license)
+   * [Acknowledgements](#acknowledgements)
+   * [Citation](#citation)
 
 ## Contents of the repo
 - The [src](https://github.com/uts-isf/CEREI/tree/main/src/main/java) folder: It contains the followings:
@@ -127,3 +129,6 @@ This project has been developed in collaboration between [UTS](https://www.uts.e
 
 ## Acknowledgements
 This work is partially supported by the [National Institute for Forestry Products Innovation (NIFPI)](https://nifpi.org.au/) and [Centre for New Energy Transition Research](https://federation.edu.au/research/research-centres/cfnetr).
+
+## Citation
+TBC.
