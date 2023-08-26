@@ -12,6 +12,13 @@
   <name>CEREI</name>
   <url>https://nifpi.org.au/</url>
 
+  <scm>
+      <url>{https://github.com/uts-isf/CEREI.git}</url> <!-- URL HTTP de clone do projeto -->
+      <connection>scm:git:{https://github.com/uts-isf/CEREI.git}</connection> <!-- URL HTTP de clone do projeto -->
+      <developerConnection>scm:git:{https://github.com/uts-isf/CEREI.git}</developerConnection> <!-- URL HTTP de clone do projeto -->
+      <tag>@{project.version}</tag>
+  </scm>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
