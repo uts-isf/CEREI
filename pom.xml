@@ -6,7 +6,7 @@
 
   <groupId>au.org.nifpi</groupId>
   <artifactId>cerei</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>v1.0</version>
   <packaging>jar</packaging>
 
   <name>CEREI</name>
