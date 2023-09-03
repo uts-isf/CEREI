@@ -33,6 +33,3 @@ replay_pid*
 
 # VS Code
 .vscode/
-
-# GitHub Workflows
-.github/workflows
