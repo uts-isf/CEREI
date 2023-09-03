@@ -42,6 +42,7 @@ CEREI presents a number of novelties and advantages:
 - The [app](https://github.com/uts-isf/CEREI/tree/main/app) folder: It contains the executable file and the associated folders for the current version.
 - The [blank_templates](https://github.com/uts-isf/CEREI/tree/main/blank_templates) folder: It contains blank templates of the seven input files, allowing users to customize the simulation according to their specific needs by populating with their own data. For more information how to fill them up, see [Documentation](#documentation).
 - The [sample_data](https://github.com/uts-isf/CEREI/tree/main/sample_data) folder: It contains a set of sub-folders containing input files specifically tailored for 15 different case study scenarios. These input files are carefully crafted from real-world data and represent various scenarios, each representing a unique use case.
+- The [supporting_docs](https://github.com/uts-isf/CEREI/tree/main/supporting_docs) folder: It contains a set of sub-folders containing the images of the tool, help file and general contribution guidelines.
 
 ## Building CEREI from source code
 Building CEREI from source code requires technical knowledge of developing java applications.  The following describes the method used to build the version on the tool on the repository, although other methods can be used.
@@ -77,13 +78,13 @@ You do not need administrative privileges to install and run CEREI using this me
 
 ## System architecture
 
-![Conceptual framework](https://github.com/uts-isf/CEREI/blob/main/assets/Conceptual%20framework.png)
+![Conceptual framework](https://github.com/uts-isf/CEREI/blob/main/supporting_docs/images/main_images/Conceptual_framework.png)
 
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
 
 ## User interface
 
-![CERI_Interface](https://github.com/uts-isf/CEREI/blob/main/assets/CERI_Interface.png)
+![CERI_Interface](https://github.com/uts-isf/CEREI/blob/main/supporting_docs/images/main_images/CERI_Interface.png)
 
 ## CERI operation
 
@@ -97,10 +98,10 @@ If any individual file(s) needs to be replaced, then only the relevant button(s)
     
 CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation).
 
-![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/blob/main/assets/CERI_Interface_Marked.png)
+![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/blob/main/supporting_docs/images/main_images/CERI_Interface_Marked.png)
 
 ## Documentation
-More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
+More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a> and in [help_file](https://github.com/uts-isf/CEREI/tree/main/supporting_docs/help_file) folder.
 
 ## Developers
 Created on March 29, 2023
