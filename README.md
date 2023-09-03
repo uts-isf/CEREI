@@ -77,13 +77,13 @@ You do not need administrative privileges to install and run CEREI using this me
 
 ## System architecture
 
-![Conceptual framework of CEREI](https://github.com/uts-isf/CEREI/assets/63223580/7ea38d52-04f9-4ee4-8d32-f337a7add722)
+![Conceptual framework](https://github.com/uts-isf/CEREI/assets/63223580/0c402717-7390-4635-810c-0828b6e0e54c)
 
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
 
 ## User interface
 
-![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/154993af-d448-4b09-953f-03d08eb3658c)
+![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/e39d30c2-0376-4b47-8efa-4e63d909b38d)
 
 ## CERI operation
 
@@ -95,14 +95,15 @@ The user needs to click on the “***Reset Input Files***” button to reset all
 
 If any individual file(s) needs to be replaced, then only the relevant button(s) (within the ***red*** highlighted box in the Figure below) needs to be clicked to select the new file.
     
-CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation). 
-![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/53155760-d4e1-4997-9aca-5a66506ac95c)
+CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation).
+
+![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/e25d3984-a1d1-4ab9-aee6-5111828bb3ae)
 
 ## Documentation
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
 
 ## Developers
-Created on Marc 29, 2023
+Created on March 29, 2023
 Created by:
 - <a href="https://github.com/Ibrahim-a-Ibrahim" target="_blank">Ibrahim Anwar Ibrahim</a>
 - <a href="https://github.com/etanvah" target="_blank">Tanveer Choudhury</a>
@@ -123,6 +124,12 @@ If you wish to contribute patches you can:
 The development team can then review your contribution and commit it upstream as appropriate.
 
 If you commit a new feature, add [FEATURE] to your commit message AND give a clear description of the new feature. The label Needs documentation will be added by maintainers and will automatically create an issue on the CEREI-Documentation, where you or others should write documentation about it.
+
+CEREI tool requires future updates to extend its functionality as follows:
+- The tool was developed using 30-minute time interval and then converting the data to be hourly. Therefore, the energy usage, spot market price, and FIT should be imported with 30-minute time interval. The tool can be extended to standardise the time interval based on a certain reference.
+- The tool does not support the modeling of the energy source. The user should use other modeling tool to generate the time-series energy output with a timeframe matches the demand.
+- The tool has been developed and tested using industrial tariff structures including TOU tariff structure (e.g., peak, shoulder, off-peak tariffs). Accordingly, it is not including flat tariffs at this stage.
+- The tool is not supporting the network reliability, stability, and constraints analysis. Therefore, it considers that all of the excess energy can be exported to the grid without any curtailment, which needs to be updated in the later version.
 
 ## License
 This project has been developed in collaboration between [UTS](https://www.uts.edu.au/) and [Federation University](https://federation.edu.au/) and it is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
