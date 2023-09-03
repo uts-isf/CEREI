@@ -77,13 +77,13 @@ You do not need administrative privileges to install and run CEREI using this me
 
 ## System architecture
 
-![Conceptual framework](https://github.com/uts-isf/CEREI/assets/63223580/0c402717-7390-4635-810c-0828b6e0e54c)
+![Conceptual framework](https://github.com/uts-isf/CEREI/blob/main/assets/Conceptual%20framework.png)
 
 The tool is composed of several internal modules, receives a number of files as inputs, and allows the user to monthly, quarterly and yearly energy bills, price efficiency index mapping, potential saving as well as the life-cycle cost assessment with and without DER, as outputs.
 
 ## User interface
 
-![CERI_Interface](https://github.com/uts-isf/CEREI/assets/63223580/e39d30c2-0376-4b47-8efa-4e63d909b38d)
+![CERI_Interface](https://github.com/uts-isf/CEREI/blob/main/assets/CERI_Interface.png)
 
 ## CERI operation
 
@@ -97,7 +97,7 @@ If any individual file(s) needs to be replaced, then only the relevant button(s)
     
 CEREI generates four outputs, highlighted by the ***green*** box. Therefore, to generate the output(s), the tool allows for seven user inputs, which are highlighted by the ***red*** box Each of these inputs and outputs is discussed in detail in [Documentation](#documentation).
 
-![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/assets/63223580/e25d3984-a1d1-4ab9-aee6-5111828bb3ae)
+![CERI_Interface_Marked](https://github.com/uts-isf/CEREI/blob/main/assets/CERI_Interface_Marked.png)
 
 ## Documentation
 More documentation on CEREI can be found at the following <a href="https://github.com/uts-isf/CEREI/wiki/CEREI:-Help-File">link</a>.
