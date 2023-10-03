@@ -136,7 +136,7 @@ CEREI tool requires future updates to extend its functionality as follows:
 This project has been developed in collaboration between [UTS](https://www.uts.edu.au/) and [Federation University](https://federation.edu.au/) and it is licensed under the terms of the <a href="https://github.com/uts-isf/CEREI/blob/main/LICENSE">MIT License</a>.
 
 ## Acknowledgements
-This work is funded by the [National Institute for Forestry Products Innovation (NIFPI)](https://nifpi.org.au/) and partially supported by [Centre for New Energy Transition Research](https://federation.edu.au/research/research-centres/cfnetr).
+This work was funded by the [National Institute for Forestry Products Innovation (NIFPI)](https://nifpi.org.au/) and partially supported by [Centre for New Energy Transition Research](https://federation.edu.au/research/research-centres/cfnetr).
 
 ## Citation
 TBC.
