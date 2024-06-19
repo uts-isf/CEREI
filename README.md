@@ -139,4 +139,18 @@ This project has been developed in collaboration between [UTS](https://www.uts.e
 This work was funded by the [National Institute for Forestry Products Innovation (NIFPI)](https://nifpi.org.au/) within the project number NV063 [grant number NIF146-2122]; and partially supported by [Centre for New Energy Transition Research](https://federation.edu.au/research/research-centres/cfnetr).
 
 ## Citation
-TBC.
+If you find CEREI useful in your work, we kindly request that you cite it as follows:
+
+```bibtex
+@article{CERI2024,
+title = {CEREI: An open-source tool for Cost-Effective Renewable Energy Investments},
+author = {Ibrahim, Ibrahim and Choudhury, Tanveer and Sargeant, James and Shah, Rakibuzzaman and Hossain, MJ and Islam, Syed},
+journal = {SoftwareX},
+volume = {26},
+pages = {101708},
+year = {2024},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2024.101708},
+url = {https://www.sciencedirect.com/science/article/pii/S2352711024000797}.
+}
+```
